@@ -14,3 +14,12 @@
 
 /* Títulos */
 h1, h2, h3 { letter-spacing: .2px; }
+
+/* Cards simples */
+.card {
+  background: #0e1117; border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px; padding: 12px 16px; margin-bottom: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.12);
+}
+.card strong { font-size: 1rem; color: #4cc9f0; }
+.card span   { font-size: 0.9rem; color: #cbd5e1; }

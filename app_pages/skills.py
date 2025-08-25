@@ -24,6 +24,7 @@ def render():
         rmin_opt    = st.number_input("r (mín)", value=0, step=5)
         rmax_opt    = st.number_input("r (máx)", value=100, step=5)
         graf_height = st.slider("Altura (px)", 320, 1000, 560, 20)
+        mostrar_meta = st.toggle("Mostrar baseline/meta = 80", value=True)
 
     
     plotly_cfg = {"displaylogo": False,

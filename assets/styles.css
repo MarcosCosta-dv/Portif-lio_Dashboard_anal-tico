@@ -1,0 +1,16 @@
+/* Tipografia e largura */
+.block-container { padding-top: 1rem; padding-bottom: 2rem; max-width: 1200px; }
+
+/* Botão estilizado reutilizável */
+.btn-primary {
+  background-color: #0077b5; color: #fff;
+  padding: 8px 14px; border: none; border-radius: 8px; cursor: pointer;
+  transition: transform .05s ease-in-out, box-shadow .2s;
+}
+.btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 24px rgba(0,0,0,.15); }
+
+/* Tabela */
+.dataframe tbody tr:hover { background-color: rgba(125,125,125,.06); }
+
+/* Títulos */
+h1, h2, h3 { letter-spacing: .2px; }

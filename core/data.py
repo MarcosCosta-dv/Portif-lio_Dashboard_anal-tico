@@ -11,9 +11,9 @@ def carregar_df_padrao():
     for ext in (".csv", ".xlsx", ".parquet"):
         caminho = os.path.join(base_dir, f"{base_name}{ext}")
         if os.path.exists(caminho):
-            if ext == ".csv":   return pd.read_csv(caminho)
-            if ext == ".xlsx":  return pd.read_excel(caminho)
-            if ext == ".parquet": return pd.read_parquet(caminho)
+            if ext == ".csv":      return pd.read_csv(caminho)
+            if ext == ".xlsx":     return pd.read_excel(caminho)
+            if ext == ".parquet":  return pd.read_parquet(caminho)
     return None
 
 def carregar_df():
@@ -29,12 +29,9 @@ def carregar_df():
 
     try:
         nome = up.name.lower()
-        if nome.endswith(".csv"):
-            return pd.read_csv(up)
-        if nome.endswith(".xlsx"):
-            return pd.read_excel(up)
-        if nome.endswith(".parquet"):
-            return pd.read_parquet(io.BytesIO(up.read()))
+        if nome.endswith(".csv"):    return pd.read_csv(up)
+        if nome.endswith(".xlsx"):   return pd.read_excel(up)
+        if nome.endswith(".parquet"):return pd.read_parquet(io.BytesIO(up.read()))
     except Exception as e:
         st.error(f"Erro ao ler o arquivo: {e}")
     return None
@@ -61,8 +58,7 @@ def ic_media(serie, conf=0.95):
     return {"media": media, "n": n, "li": li, "ls": ls, "conf": conf}
 
 def correlacao_pearson(x, y):
-    x = pd.to_numeric(x, errors='coerce')
-    y = pd.to_numeric(y, errors='coerce')
+    x = pd.to_numeric(x, errors='coerce'); y = pd.to_numeric(y, errors='coerce')
     mask = x.notna() & y.notna()
     if mask.sum() < 3: return None
     r, p = stats.pearsonr(x[mask], y[mask])

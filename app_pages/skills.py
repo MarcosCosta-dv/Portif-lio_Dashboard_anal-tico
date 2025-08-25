@@ -18,19 +18,22 @@ def render():
 
     with cols[0]:
         st.subheader("Desenvolvimento")
-        st.plotly_chart(radar_plotly("Desenvolvimento", skills_dev, baseline_val=baseline,
-                                     rmin=rmin, rmax=rmax, tema=tema,
-                                     height=h, width=w),
-                        use_container_width=False, key="radar_dev_main", config=PLOTLY_CONFIG)
+        st.plotly_chart(
+            radar_plotly("Desenvolvimento", skills_dev, baseline_val=baseline,
+                         rmin=rmin, rmax=rmax, tema=tema, height=h, width=w),
+            use_container_width=False, config=PLOTLY_CONFIG, key="radar_dev_main"
+        )
     with cols[1]:
         st.subheader("Ferramentas & Plat.")
-        st.plotly_chart(radar_plotly("Ferramentas & Plataformas", skills_tools, baseline_val=baseline,
-                                     rmin=rmin, rmax=rmax, tema=tema,
-                                     height=h, width=w),
-                        use_container_width=False, key="radar_tools_main", config=PLOTLY_CONFIG)
+        st.plotly_chart(
+            radar_plotly("Ferramentas & Plataformas", skills_tools, baseline_val=baseline,
+                         rmin=rmin, rmax=rmax, tema=tema, height=h, width=w),
+            use_container_width=False, config=PLOTLY_CONFIG, key="radar_tools_main"
+        )
     with cols[2]:
         st.subheader("Soft Skills")
-        st.plotly_chart(radar_plotly("Soft Skills", skills_soft, baseline_val=baseline,
-                                     rmin=rmin, rmax=rmax, tema=tema,
-                                     height=h, width=w),
-                        use_container_width=False, key="radar_soft_main", config=PLOTLY_CONFIG)
+        st.plotly_chart(
+            radar_plotly("Soft Skills", skills_soft, baseline_val=baseline,
+                         rmin=rmin, rmax=rmax, tema=tema, height=h, width=w),
+            use_container_width=False, config=PLOTLY_CONFIG, key="radar_soft_main"
+        )

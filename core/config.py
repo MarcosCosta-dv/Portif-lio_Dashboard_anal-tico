@@ -13,7 +13,6 @@ def carrega_css(path_css: str):
         pass  # CSS é opcional
 
 def get_appearance():
-    """Lê controles salvos no session_state."""
     tema = st.session_state.get("tema_graf", "dark")
     rmin = st.session_state.get("rmin_opt", 0)
     rmax = st.session_state.get("rmax_opt", 100)

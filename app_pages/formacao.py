@@ -1,15 +1,16 @@
+# app_pages/formacao.py
 # -*- coding: utf-8 -*-
 import streamlit as st
 
 def render():
-    st.title("Formação e Experiência")
+    st.title("🎓 Formação e Experiência")
 
     st.subheader("Sobre mim")
     st.markdown(
         """
         **Experiência em Desenvolvimento:** HTML5, JavaScript, CSS, Python, SQL e Java.  
         **Proficiência em Software:** Pacote Office e Adobe.  
-        **Habilidades Comportamentais:** Comunicativo, pensamento crítico, raciocínio lógico e trabalho em equipe.
+        **Habilidades Comportamentais:** Comunicação, pensamento crítico, raciocínio lógico e trabalho em equipe.
         """
     )
 
@@ -17,7 +18,8 @@ def render():
     st.markdown(
         """
         **C6 Bank — Analista Jr (Monitoriação)** *(fev/2025 – atual, remoto)*  
-        - Splunk, automações em Python e Power Automate.  
+        - Monitorias e KPIs via **Splunk**.  
+        - Automações com **Python** e **Power Automate**.  
         - Stack: Splunk Cloud, BigQuery, Excel, Salesforce, ServiceNow, Azure DevOps, RunDeck, Grafana.
         """
     )
@@ -29,6 +31,3 @@ def render():
         - Stack: Azure DevOps, PostgreSQL, Grafana, ServiceNow, etc.
         """
     )
-
-    st.markdown("---")
-    st.markdown("📬 **Contato:** [LinkedIn /marcosscosta](https://www.linkedin.com/in/marcosscosta)", unsafe_allow_html=True)

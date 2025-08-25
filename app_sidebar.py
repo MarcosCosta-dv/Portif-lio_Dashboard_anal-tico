@@ -11,6 +11,7 @@ carrega_css("assets/styles.css")
 st.sidebar.markdown("## Navegação")
 pagina = st.sidebar.radio("Ir para:", ["Home", "Formação e Experiência", "Skills", "Análise de Dados"])
 
+
 # ===== Roteamento =====
 if pagina == "Home":
     home.render()

@@ -143,7 +143,7 @@ def render():
             fig, ax = plt.subplots(figsize=(7,4))
             sns.barplot(x=vc.values, y=vc.index, ax=ax)
             ax.set_xlabel("Pedidos"); ax.set_ylabel("Categoria"); ax.set_title("Top 15")
-            st.pyplot(fig, clear_igure=True)  # corrigido: clear_figure
+            st.pyplot(fig, clear_figure=True)  # corrigido: clear_figure
 
         # Regiões mais lucrativas
         if has(colmap, "regiao", df) and has(colmap, "valor_pedido", df):

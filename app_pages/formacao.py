@@ -3,7 +3,7 @@
 import streamlit as st
 
 def render():
-    st.title("🎓 Formação e Experiência")
+    st.title("Formação e Experiência")
 
     st.subheader("Sobre mim")
     st.markdown(
